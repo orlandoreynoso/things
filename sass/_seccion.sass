@@ -1,0 +1,83 @@
+.hvr-sweep-to-right
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px transparent
+  -webkit-transition-property: color
+  transition-property: color
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+
+.hvr-sweep-to-right:before
+  content: ""
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba($verde,1)
+  -webkit-transform: scaleX(0)
+  transform: scaleX(0)
+  -webkit-transform-origin: 0 50%
+  transform-origin: 0 50%
+  -webkit-transition-property: transform
+  transition-property: transform
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+.hvr-sweep-to-right:hover, 
+.hvr-sweep-to-right:focus, 
+.hvr-sweep-to-right:active
+  color: $blanco
+  cursor: pointer
+  .icono
+    color: $amarillo
+  .texto
+    color: $blanco
+    p
+      color: $blanco
+  .titu
+    color: $blanco
+.hvr-sweep-to-right:hover:before, 
+.hvr-sweep-to-right:focus:before, 
+.hvr-sweep-to-right:active:before 
+  -webkit-transform: scaleX(1)
+.sec-todo
+  .hoja
+    border: 1px solid rgba($gris, 0)
+    padding: 6px
+    margin: 6px
+    text-align: center
+    text-decoration: none
+    outline: none
+    &:hover,
+    &:focus,
+    &:active
+      outline: none    
+    a
+      outline: none
+      &:hover,
+      &:focus,
+      &:active
+        outline: none
+    .icono
+      color: $celeste
+      padding: 0px
+      margin: 0px
+      font-size: 35px
+      font-family: 'FontAwesome'
+      .mano:before
+        content: "\f2b5"
+    .texto
+      color: $azul
+    .titu
+      font-size: 1.5em
+      margin: 12px 0 12px
+      line-height: 1.2em
+      color: $azul
+/*==================*/      
+.widget
+  list-style: none
+  box-sizing: border-box
+  padding: 10px

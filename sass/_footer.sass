@@ -1,0 +1,65 @@
+footer
+	width: 100%
+	margin: 20px auto 0px auto
+	background-color: $azul
+	min-height: 200px
+	padding: 20px 0px 20px 0px
+	.group
+		max-width: 1024px
+		margin: 0px auto
+		display: flex
+		justify-content: space-between
+		font-size: 18px
+		padding-top: 12px
+		padding-bottom: 10px
+		font-size: $fontopen
+		#desarrollado
+			width: 45%
+			color: $blanco
+			text-align: right
+			a
+				width: 45%
+				color: $yema
+				font-weight: bold
+				@include transicion_a()
+				&:hover
+					width: 45%
+					color: $blanco
+		.direccion
+			width: 45%
+			color: $blanco
+			list-style: none
+			text-align: left
+			p
+				margin: 0px
+				padding: 0px
+	.footer-slogan
+		text-align: center
+		font-size: 2.0em
+		color: $blanco
+		max-width: 1024px
+		padding-bottom: 25px
+		margin: 0px auto
+		font-weight: bold
+		font-style: italic
+
+/*==================*/
+#totop
+	display: none
+	text-decoration: none
+	position: fixed
+	bottom: 40px
+	margin-left: 640px
+	overflow: hidden
+	width: 43px
+	height: 28px
+	border: none
+	text-indent: -999px
+	z-index: 20
+	background: url('../images/totop.png') no-repeat left 0
+	transition: 0s ease
+	-o-transition: 0s ease
+	-webkit-transition: 0s ease
+	&:hover
+		outline: none
+		background-position: right 0

@@ -1,0 +1,42 @@
+.contenido_menu
+	box-sizing: border-box
+	background-color: $gris
+	margin: 0px auto
+	padding: 0px
+	width: 100%
+	-webkit-box-shadow: 0 10px 25px 0 #474b4d
+	box-shadow: 0 10px 25px 0 #474b4d
+	nav
+		background: $amarillo
+		padding: 0px 0px 0px 0px
+		ul
+			overflow: hidden
+			list-style: none
+			display: flex
+			flex-flow: row wrap
+			justify-content: center
+			text-transform: uppercase
+			margin: 0px
+			padding: 0px
+			.current-menu-item
+				background-color: $verde
+				color: $blanco
+				&>a
+					color: $blanco !important
+			li
+				float: left
+				a
+					color: $azul
+					padding: 15px 15px 15px 15px
+					display: block
+					text-decoration: none
+					font-size: 1.1875em
+					transition: 0.5s ease
+					font-family: 'pakenhamregular'
+					&:hover
+						background: $verde
+						color: $blanco
+					&:focus
+						outline: none
+				span
+					margin-right: 10px

@@ -1,0 +1,147 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+/*=================================*/
+*,*:before,*:after
+  box-sizing: border-box
+html,body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+/*=================================*/
+body
+  background-color: $blanco
+  font-size: 16px
+  font-family: 'pakenhamregular', $fontopen !important
+  a,.page-numbers
+    outline: none
+.woocommerce-pagination
+  .page-numbers
+    outline: none
+/*=================================*/
+.contenedor
+  max-width: 1100px
+.sombra
+header
+  .ca-cabecera
+    background-color: $verde
+    -webkit-box-shadow: 0 10px 25px 0 #474b4d
+    box-shadow: 0 10px 25px 0 #474b4d
+    .ca-logo
+      margin: 10px
+      overflow: hidden
+      .logo-link
+        display: block
+        outline: none
+        overflow: hidden
+        width: 192px
+        img.logo
+          width: 100%
+          height: auto
+          margin: 0px
+          padding: 0px
+          display: block
+/* Caberece teléfonos*/
+header
+  .ca-cabecera
+    .tredes
+      display: inline-block
+      font-weight: 500
+      outline: none
+      .t-cin
+        display: flex
+        flex-flow: column wrap
+        justify-content: center
+        align-items: center
+        align-content: center
+        text-align: center
+        box-sizing: border-box
+        width: 100%
+        color: $blanco
+        font-weight: 600
+        outline: none
+        font-size: 1.3em
+        &:hover
+          text-decoration: none
+        .t-c
+          width: 100%
+        .t-n
+          width: 100%
+          display: block
+          padding: 0px
+          margin: 0px
+          &:hover
+            color: $amarillo
+          .t-i
+            margin-right: 10px
+            color: $amarillo
+/*===== buscardor ======**/
+header
+  .ca-cabecera
+    .ca-search-followers
+      width: 100%
+      padding: 0px
+      margin: 0px
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
+      align-content: center
+      box-sizing: border-box
+      .searchbar
+        margin: 0px 0px 0px 0px
+        padding: 0px 0px 0px 0px
+        width: 100%
+        box-sizing: border-box
+        form.frm-buscar
+          margin: 15px 0px 0px 0px
+          padding: 0px 0px 0px 0px
+          text-align: center
+          box-sizing: border-box
+          width: 100%
+          .cuadro_input
+            display: inline-block
+            padding: 5px 5px 5px 10px
+            line-height: 1em
+          .cuadro_boton
+      .sociales
+        width: 100%
+        margin: 5px auto 0px auto
+        display: block
+        padding: 0px
+        text-align: center
+        ul.menu
+          text-align: center
+          list-style: none
+          padding: 0px 55px 0px 0px
+          .sr-text
+            display: none
+          li
+            margin-right: 10px
+            display: inline-block
+            a
+              text-decoration: none
+              color: $amarillo
+              transition: 0.5s ease
+              &:hover
+                color: $blanco
+            a::before
+              font-family: 'FontAwesome'
+              content: '\f08e'
+              font-size: 1.3em
+              -webkit-font-smoothing: antialiased
+              text-decoration: none
+            a[href*="facebook.com"]
+              &::before
+                content: '\f09a'
+            a[href*="twitter.com"]
+              &::before
+                content: '\f099'
+            a[href*="youtube.com"]
+              &::before
+                content: '\f16a'
+            a[href*="instagram.com"]
+              &::before
+                content: '\f16d'

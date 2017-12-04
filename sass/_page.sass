@@ -1,0 +1,202 @@
+.mapa
+	width: 100%
+	box-sizing: border-box
+	background-color: $blanco
+	.mapa-texto
+		text-align: center
+		padding: 20px
+		margin: 0px auto
+		h3
+			font-size: 3rem
+			margin: 1rem 0 2.5rem
+			font-weight: normal
+			color: $grisoscuro
+	iframe
+		width: 100%
+	.mapa-img
+		width: 100%
+		&:hover
+			filter: alpha(opacity=50)
+			-moz-opacity: 1.0
+			opacity: 0.5
+			-khml-opacity: 1.0
+			transition: 0.5s ease
+			box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+		&:hover,
+		&:focus,
+		&:active
+			outline: none
+.con-general
+	.side
+		h2
+			color: $azul
+		.entradas
+			.recientes
+				#secondary
+					width: 100%
+.con-general
+	margin-top: 0px
+	padding-bottom: 20px
+	.side-contacto
+		padding: 10px 20px 20px 20px
+		.widget
+			padding: 10px
+		li
+			list-style: none
+		h2
+			color: $azul
+		.widget
+			list-style: none
+	.contacto
+		.woocommerce-breadcrumb
+			margin: 0px
+			padding: 0px
+		.nf-form-title
+			display: none
+		.nav
+			margin: 0px
+			padding: 0px
+		.interiores
+			margin-top: 0px
+			padding-top: 30px
+			p
+				color: $azul
+			h1
+				color: $verde
+				font-size: 2em
+		input[type="button"]
+			background-color: $verde
+			width: 100%
+			color: $blanco
+			outline: none
+			transition: 0.5s ease
+			&:hover
+				background-color: $grisoscuro
+				color: $amarillo
+				transition: 0.5s ease
+	.con
+		img
+			max-width: 100%
+			height: auto
+		.alignleft
+			float: left
+			margin: 20px 20px 20px 0px
+		.alignright
+			float: right
+			margin: 20px 0px 20px 20px
+		.aligncenter
+			width: 100%
+			height: auto
+			margin: 5px auto
+		.interiores
+			line-height: 1.625em
+			font-size: 1.0625em
+			padding-top: 12px
+			h1
+				color: $verde
+				font-size: 2em
+			h2
+				color: $verde
+			a
+				color: $celeste
+				&:hover
+					color: $verde
+					@include transicion_a()
+		.nf-form-cont
+			margin-top: 15px
+			.nf-form-title
+				display: none
+			.nf-field-element
+				input[type="button"]
+					background-color: $verde
+					color: $blanco
+					outline: none
+					transition: 0.5s ease
+					width: 100%
+					&:hover
+						background-color: $grisoscuro
+						color: $amarillo
+						transition: 0.5s ease
+		.titulo
+		.woocommerce-breadcrumb
+			color: $grisoscuro
+			width: 100%
+			margin: 0px auto
+			padding: 2px
+			a
+				color: $verde
+				&:hover
+					color: $grisoscuro
+					transition: 0.5s ease
+		.contenido
+			margin-bottom: 10px
+			padding-bottom: 10px
+			margin-top: 10px
+			.title
+				font-size: 1.5em
+				color: $celeste
+				&:hover
+					color: $verde
+			.date-cat
+				padding: 10px
+				.fecha
+					font-size: 0.9em
+					color: $blanco
+					.icon-date
+						color: $gris
+						margin-right: 6px
+					span
+						width: 50%
+					.label2
+						background-color: $gris
+						height: 60px
+						width: 45%
+						font-size: 14px
+						padding: 4px 5px 4px 3px
+						text-align: center
+						vertical-align: middle
+					.label1
+						background-color: $yema
+						height: 60px
+						width: 45%
+						font-size: 14px
+						padding: 4px 5px 4px 10px
+						text-align: center
+						vertical-align: middle
+						color: $gris
+				.descripcion_categoria
+					font-size: 0.9em
+					float: right
+					text-align: right
+					color: $azul
+					.icon-file
+						margin-right: 5px
+						color: $verde
+					a
+						color: $gris
+						&:hover
+							color: $celeste
+			.thumb
+				padding: 5px
+				img
+					width: 100%
+					height: auto
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.info
+				padding: 5px 10px 10px 10px
+				line-height: 1.625em
+				font-size: 1.0625em
+				color: #302f2f
+				font-family: $fontopen
+				h1
+					color: $celeste
+				h2
+					color: $verde
+	.side
+		@include sidebar()

@@ -1,0 +1,137 @@
+$verde: #0c8f87
+$amarillo: #ffde00
+$oro: #ffde00
+$yema: #ffde00
+$blanco: #ffffff
+$fontopen: 'Open Sans', sans-serif
+$grisoscuro: #212121
+$gris: #cccccc
+$azul: #234765
+$grismasclaro: #f5f5f5
+$grisclaro: #d9d9d9
+$limon: #8ec44f
+$celeste: #0da5e4
+$crema: #fee9ce
+$negro: #000000
+
+@font-face
+	font-family: 'pakenhamregular'
+	src: url('fonts/pakenham_rg-webfont.woff2') format('woff2'), url('fonts/pakenham_rg-webfont.woff') format('woff')
+	font-weight: normal
+	font-style: normal
+
+/*==========================*/
+@mixin sidebar()
+	.entradas
+		box-sizing: border-box
+		.search
+			margin: 0px auto
+			padding-bottom: 10px
+			padding-top: 10px
+			padding-left: 10px
+		.titulo_entradas
+			padding: 10px
+			h3
+				font-size: 1.2em
+				color: $celeste
+				text-transform: uppercase
+				margin: 10px 0px 10px 0px
+				padding: 0px
+		.recientes
+			margin-bottom: 20px
+			padding-left: 10px
+			padding-right: 10px
+			.facebook
+				width: 100%
+				text-align: center
+			.entradas_recientes
+				margin-bottom: 10px
+				.list
+					padding: 5px
+					margin-bottom: 5px
+					padding-bottom: 9px
+					overflow: hidden
+					border-bottom: 1px solid $celeste
+					text-transform: lowercase
+					display: flex
+					flex-flow: row wrap
+					justify-content: space-between
+					align-items: center
+					box-sizing: border-box
+					.thumb
+						width: 20%
+						img
+							width: 90%
+							height: auto
+							display: inline-block
+							float: left
+							margin-right: 7px
+							box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+							border: 2px solid #ffffff
+							&:hover
+								filter: alpha(opacity=50)
+								-moz-opacity: 1.0
+								opacity: 0.5
+								-khml-opacity: 1.0
+								transition: 0.5s ease
+								box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+					.title
+						color: $celeste
+						line-height: 1.3em
+						font-size: 1.1em
+						text-decoration: none
+						width: 78%
+						text-transform: lowercase
+						&:hover
+							color: $verde
+							transition: 0.5s ease
+							-o-transition: 0.5s ease
+							-webkit-transition: 0.5s ease
+						&:first-letter
+							text-transform: uppercase
+/*============================*/
+
+@mixin opacidad($valor: 80)
+	filter: alpha(opacity=$valor)
+	-moz-opacity: 1.0
+	opacity: 0.5
+@mixin transicion_a()
+	transition: 0.5s ease
+	-o-transition: 0.5s ease
+	-webkit-transition: 0.5s ease
+@mixin transparencia()
+	background-color: rgba(120, 159, 198, 0.8)
+	background: rgba(120, 159, 198, 0.8)
+@mixin sombra()
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+@mixin sombra_hover()
+	box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+	-webkit-box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+	-moz-box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+@mixin borde($valor,$color)
+	border: $valor solid $color
+@mixin fecha()
+	color: $blanco
+	text-align: right
+	text-transform: uppercase
+	font-weight: bold
+	width: 100%
+	span
+		width: 50%
+	.label2
+		background-color: $gris
+		height: 60px
+		width: 45%
+		font-size: 14px
+		padding: 4px 5px 4px 3px
+		text-align: center
+	.label1
+		background-color: $yema
+		height: 60px
+		width: 45%
+		font-size: 14px
+		padding: 4px 5px 4px 10px
+		text-align: center
+		color: $gris

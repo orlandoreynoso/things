@@ -1,0 +1,210 @@
+.con-general
+	box-sizing: border-box
+	.categorias-productos
+		.widgettitle
+		.product-categories
+			margin-left: 0px
+			li
+				list-style: none
+				.count
+					color: $azul
+					padding-left: 10px
+					padding-right: 10px
+				a
+					color: $verde
+					font-size: 1.25em
+					transition: 0.5s ease
+					outline: none
+					&:hover
+						color: $azul
+	.con
+		.contenido
+			box-sizing: border-box
+			.info
+				.storefront-sorting
+				.products
+					display: flex
+					box-sizing: border-box
+					li
+						a
+							h2
+								padding: 10px
+								color: $verde
+							img
+								border: 2px solid white
+								padding: 0px
+								margin: 0px
+								cursor: pointer
+								@include borde(2px,$blanco)
+								&:hover
+									transition: 0.5s ease
+									cursor: pointer
+									@include opacidad(50)
+									@include transicion_a()
+.product
+	box-sizing: border-box
+	padding: 4px
+	display: flex
+	flex-flow: row wrap
+	position: relative
+	.woocommerce-product-gallery
+		width: 50%
+		display: flex
+		position: relative
+		.woocommerce-product-gallery__trigger
+			position: absolute
+			padding: 0px
+			margin: 0px
+			display: block
+			top: 10px
+			left: 10px
+			width: 20px
+			height: 20px
+			display: none
+		.flex-viewport
+			width: 100%
+		.flex-control-nav
+			background-color: rgba(black, 0.5)
+			box-sizing: border-box
+			padding: 5px
+			order: 2
+			width: 99.6%
+			position: absolute
+			bottom: 5px
+			margin: 0px auto
+			display: flex
+			justify-content: center
+			box-sizing: border-box
+			list-style: none
+			justify-content: center
+			li
+				width: 20%
+				padding: 5px
+				img
+					width: 100%
+					border: 2px solid white
+					padding: 0px
+					margin: 0px
+					cursor: pointer
+					@include sombra()
+					@include borde(2px,$blanco)
+					&:hover
+						border: 2px solid green
+						transition: 0.5s ease
+						cursor: pointer
+						@include opacidad(50)
+						@include transicion_a()
+						@include sombra_hover()
+	.summary
+		width: 50%
+		padding: 20px
+		h1
+			color: $verde
+		.price
+			color: $azul
+			font-size: 1.5em
+	.woocommerce-tabs
+		&:hover,
+		&:focus,
+		&:active
+			outline: none
+		ul.tabs li
+			color: $verde
+		ul
+			li
+				color: $verde
+				font-weight: bold
+				a
+					color: $verde
+					&:hover
+						color: $azul
+						transition: 0.5s ease
+					&:hover,
+					&:focus,
+					&:active
+						outline: none
+		.tabs
+			.tab-title-reviews
+				color: $verde
+		.woocommerce-Tabs-panel
+			input[type="submit"]
+				background-color: $verde
+				width: 100%
+				&:hover
+					background-color: $grisoscuro
+					color: $amarillo
+					transition: 0.5s ease
+.con-general
+	.contenido
+		.comprar
+			box-sizing: border-box
+			.page-description
+				h1
+					color: $verde
+				p
+					color: $azul
+					font-size: 1.4em
+				ul
+					font-size: 1.1em
+					color: $grisoscuro
+			.page-title
+				display: none
+			.products
+				display: flex
+				flex-flow: row wrap
+				padding: 0px
+				margin: 0px
+				box-sizing: border-box
+				li
+					padding: 0px 0px 10px 0px
+					margin:  4px
+					box-sizing: border-box
+					width: 24%
+					.button
+						text-align: center
+						margin: 0px auto
+						background-color: $azul
+						color: $grisclaro
+						vertical-align: middle
+						transition: 0.5s ease
+						&:hover
+							text-decoration: none
+							background-color: $grisclaro
+							color: $azul
+					a
+						&:focus
+							outline: none
+						h2
+							box-sizing: border-box
+							color: $verde
+							margin-top: 3px
+							margin-bottom: 3px
+							padding: 0px
+						img
+							border: 2px solid white
+							padding: 0px
+							margin: 0px
+							cursor: pointer
+							@include borde(2px,$blanco)
+							&:focus
+								outline: none
+							&:hover
+								transition: 0.5s ease
+								cursor: pointer
+								@include opacidad(50)
+								@include transicion_a()
+/*============ breade ==============*/
+.col2-set
+	.col-1
+		width: 50% !important
+.bread
+	margin-top: 10px
+	font-size: 1.125em
+	box-sizing: border-box
+	nav
+		margin-bottom: 0px
+		a
+			color: $verde
+			transition: 0.5s ease
+			&:hover
+				color: $azul
