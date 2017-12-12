@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* devuelve el directorio de stilo de css, y se le asigna a temppath */
 define('TEMPPATH',get_bloginfo('stylesheet_directory'));
 /*En esto concatenamos la carpeta images*/
@@ -10,7 +10,7 @@ add_theme_support('post-thumbnails');
 /*========== incluyendo los estilo que uso ===============*/
 //include (TEMPLATEPATH. '/inc/estilos.php');
 //add_image_size( $name, $width, $height, $crop );
-the_post_thumbnail('thumbnail',1024,1024,true);       // Tamaño de la miniatura 150x150 píxeles 
+the_post_thumbnail('thumbnail',1024,1024,true);       // Tamaño de la miniatura 150x150 píxeles
 the_post_thumbnail('medium',300,300, true);          // Tamaño de la mediano 300x300 píxeles
 the_post_thumbnail('large');
 the_post_thumbnail('pastorales', 751, 422, true);
@@ -26,6 +26,47 @@ function menus_generales(){
 
 add_action('init','menus_generales');
 
+/*======== funciton somos ======*/
+function somos(){ ?>
+  <div class="container">
+    <section class="cover-publicidad">
+      <?php get_template_part( 'template/cover','somos' )?>
+    </section>
+  </div>
+  <?php
+}
+
+/*========= FUNCION slidesr*/
+
+function or_slider(){
+?>
+<div class="container">
+  <div class="slide">
+      <div class="row">
+        <div class="col-md-12">
+          <?php
+           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
+          ?>
+          <?php
+            echo do_shortcode("[metaslider id=92]");
+          ?>
+        </div>
+      </div>
+  </div>
+</div>
+<?php
+
+}
+add_action( 'homepage', 'or_slider',9);
+/*========= agregar informacion extra en el home page ===*/
+function or_somos(){
+  ?>
+  <h1>Hola</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ea iusto, sequi quia ad magni dolor quod adipisci porro recusandae similique autem nostrum, perspiciatis, laudantium officiis culpa provident voluptates nisi.</p>
+  <?php
+}
+
+add_action( 'homepage','or_somos', 11);
 
 function estilos_woo(){
 /*
@@ -177,6 +218,6 @@ add_action( 'storefront_header', 'storefront_primary_navigation_wrapper',       
 			 * @hooked storefront_header_cart                      - 60
 			 * @hooked storefront_primary_navigation_wrapper_close - 68
 			 */
-			//do_action( 'storefront_header' ); 
+			//do_action( 'storefront_header' );
 
 ?>

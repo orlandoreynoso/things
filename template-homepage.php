@@ -14,26 +14,7 @@
 
 get_header(); ?>
 
-<div class="container">
-  <div class="slide">
-      <div class="row">
-        <div class="col-md-12">
-          <?php
-           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
-          ?>
-          <?php
-            echo do_shortcode("[metaslider id=92]");
-          ?>
-        </div>
-      </div>
-  </div>
-</div>
 
-<div class="container">
-  <section class="cover-publicidad">
-    <?php get_template_part( 'template/cover','somos' )?>
-  </section>
-</div>
 
 
 	<div id="primary" class="content-area">

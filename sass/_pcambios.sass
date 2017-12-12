@@ -1,0 +1,76 @@
+/*============ breade ============== */
+.col2-set .col-1
+  width: 50% !important
+.bread
+  margin-top: 10px
+  font-size: 1.125em
+  box-sizing: border-box
+  .bread nav
+    margin-bottom: 0px
+    .bread nav a
+      color: #0c8f87
+      transition: 0.5s ease
+      .bread nav a:hover
+        color: #234765
+/*========= modificando con inspeccionador de elementos ========*/
+.hentry.type-page .entry-header
+  border-bottom: 0
+  margin-bottom: 0
+  display: none
+@media (min-width: 768px)
+  .storefront-primary-navigation
+    clear: both
+    background: #ffde00 !important
+    margin-left: -99em
+    margin-right: -99em
+    padding-left: 99em
+    padding-right: 99em
+.main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, .site-footer .storefront-handheld-footer-bar a:not(.button),
+button.menu-toggle, button.menu-toggle:hover
+  color: #484c51 !important
+.hentry
+  margin: 0 0 4.235801032em
+header.site-header
+  background-color: $verde !important
+  padding-top: 0px
+
+/*== cambio para le boton de compra*/
+.widget
+  a.button.checkout
+    background: $verde !important
+    transition: 0.5s ease
+    color: $blanco !important
+    &:hover
+      background-color: $celeste !important
+      border-color: #1a1a1a
+      transition: 0.5s ease
+/*============================================*/
+/*=== icono de canasta de compra======*/
+.site-header-cart
+  .cart-contents
+    &:after
+      color: $grisoscuro !important
+/*== Para navegación (menu) con dispositimos moviles ======*/
+@media screen and (max-width: 768px) /* de 768 a cero. 0**/
+  .site
+  .storefront-primary-navigation
+    .main-navigation
+      .menu-toggle
+        background-color: $verde
+        color: $blanco
+        border: 2px solid $yema
+        font-size: 1.2em
+        span
+          color: $blanco
+      .menu
+        box-sizing: border-box
+        ul
+          li
+            background-color: $celeste
+            box-sizing: border-box
+            padding-left: 10px
+            a
+              color: $blanco
+              font-size: 1.2em
+          .current_page_item
+            background-color: $yema

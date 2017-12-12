@@ -25,17 +25,23 @@ body
 .sombra
 header
   .ca-cabecera
-    background-color: $verde
-    -webkit-box-shadow: 0 10px 25px 0 #474b4d
-    box-shadow: 0 10px 25px 0 #474b4d
+    padding: 10px 0px
     .ca-logo
       margin: 10px
       overflow: hidden
+      box-sizing: border-box
+      @media screen and (max-width: 768px) /* de 768 a cero. 0**/
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        margin-bottom: 20px
       .logo-link
         display: block
         outline: none
         overflow: hidden
-        width: 192px
+        width: 280px
+        padding: 5px
         img.logo
           width: 100%
           height: auto
@@ -45,6 +51,10 @@ header
 /* Caberece teléfonos*/
 header
   .ca-cabecera
+    .widget
+      list-style-type: none
+      padding: 0px
+      margin: 0px
     .tredes
       display: inline-block
       font-weight: 500
@@ -106,42 +116,3 @@ header
             padding: 5px 5px 5px 10px
             line-height: 1em
           .cuadro_boton
-      .sociales
-        width: 100%
-        margin: 5px auto 0px auto
-        display: block
-        padding: 0px
-        text-align: center
-        ul.menu
-          text-align: center
-          list-style: none
-          padding: 0px 55px 0px 0px
-          .sr-text
-            display: none
-          li
-            margin-right: 10px
-            display: inline-block
-            a
-              text-decoration: none
-              color: $amarillo
-              transition: 0.5s ease
-              &:hover
-                color: $blanco
-            a::before
-              font-family: 'FontAwesome'
-              content: '\f08e'
-              font-size: 1.3em
-              -webkit-font-smoothing: antialiased
-              text-decoration: none
-            a[href*="facebook.com"]
-              &::before
-                content: '\f09a'
-            a[href*="twitter.com"]
-              &::before
-                content: '\f099'
-            a[href*="youtube.com"]
-              &::before
-                content: '\f16a'
-            a[href*="instagram.com"]
-              &::before
-                content: '\f16d'

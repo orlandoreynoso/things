@@ -1,0 +1,61 @@
+/*======== buscador cabecera ===========*/
+header
+  .ca-cabecera
+    .ca-search-followers
+      .or-buscador
+        box-sizing: border-box
+        padding: 0px
+        margin: 0px
+        .widget
+          list-style: none
+          form
+            box-sizing: border-box
+            margin: 10px
+            background-color: yellow
+        li.widget_product_search
+          list-style: none
+          .woocommerce-product-search
+            padding: 0px 0px 0px 0px
+      .or-redes
+        box-sizing: border-box
+        padding: 0px 0px 0px 0px
+        margin: 0px
+        width: 100%
+        nav.sociales
+        .sociales
+          width: 100%
+          padding: 0px
+          text-align: center
+          ul.menu
+            text-align: center
+            list-style: none
+            padding: 0px 0px 0px 0px
+            .sr-text
+              display: none
+            li
+              margin-right: 10px
+              display: inline-block
+              a
+                text-decoration: none
+                transition: 0.5s ease
+                color: $gris3 !important
+                &:hover
+                  color: $yema !important
+              a::before
+                font-family: 'FontAwesome'
+                content: '\f08e'
+                font-size: 2.1em
+                -webkit-font-smoothing: antialiased
+                text-decoration: none
+              a[href*="facebook.com"]
+                &::before
+                  content: '\f09a'
+              a[href*="twitter.com"]
+                &::before
+                  content: '\f099'
+              a[href*="youtube.com"]
+                &::before
+                  content: '\f16a'
+              a[href*="instagram.com"]
+                &::before
+                  content: '\f16d'
