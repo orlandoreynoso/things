@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* @media screen and ( min-width: 641px ) ocultar de 641px hasta infinito  para que se muestre el menu */
+/* @media screen and ( max-width: 640px ) 0 a 640px para movil ò de 640 a 0 */
 @font-face {
   font-family: 'pakenhamregular';
   src: url("fonts/pakenham_rg-webfont.woff2") format("woff2"), url("fonts/pakenham_rg-webfont.woff") format("woff");
@@ -23,20 +25,115 @@
       .bread .bread nav .bread nav a .bread nav a:hover {
         color: #234765; }
 
+/*========== contenido del sitio ==================*/
+.site-content .col-full {
+  width: 100%; }
+  .site-content .col-full .content-area .site-main header.woocommerce-products-header {
+    display: none; }
+  .site-content .col-full .content-area .site-main .storefront-sorting {
+    color: #234765; }
+  .site-content .col-full .content-area .site-main ul.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .site-content .col-full .content-area .site-main ul.products li.product {
+      margin: 0px auto 10px auto;
+      box-sizing: border-box;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(35, 71, 101, 0.2);
+      background-color: #ffde00; }
+      .site-content .col-full .content-area .site-main ul.products li.product span.price {
+        font-size: 1.5em;
+        color: #333; }
+      .site-content .col-full .content-area .site-main ul.products li.product .added_to_cart {
+        background-color: #0c8f87;
+        width: 70%;
+        margin: 10px auto 0px auto;
+        color: #ffffff;
+        font-weight: normal; }
+        .site-content .col-full .content-area .site-main ul.products li.product .added_to_cart:hover {
+          background-color: #234765;
+          color: #ffffff;
+          transition: 0.5s ease; }
+      .site-content .col-full .content-area .site-main ul.products li.product .woocommerce-LoopProduct-link h2 {
+        color: #234765;
+        font-size: 1.3em; }
+      .site-content .col-full .content-area .site-main ul.products li.product .woocommerce-LoopProduct-link img {
+        border-radius: none !important;
+        width: 100%; }
+        .site-content .col-full .content-area .site-main ul.products li.product .woocommerce-LoopProduct-link img:hover {
+          opacity: 0.7;
+          transition: 0.5s ease; }
+      .site-content .col-full .content-area .site-main ul.products li.product .button {
+        background-color: #0c8f87;
+        color: #ffffff;
+        font-size: 1em;
+        font-weight: normal;
+        width: 75%;
+        margin: 0px auto;
+        border-radius: 5px; }
+        .site-content .col-full .content-area .site-main ul.products li.product .button:hover {
+          background-color: #234765;
+          color: #ffffff;
+          transition: 0.5s ease; }
+      .site-content .col-full .content-area .site-main ul.products li.product a {
+        display: block;
+        text-decoration: none;
+        outline: none;
+        color: #234765;
+        font-size: 1.2em; }
+        .site-content .col-full .content-area .site-main ul.products li.product a:hover {
+          color: #0c8f87; }
+  .site-content .col-full nav.woocommerce-breadcrumb {
+    font-size: 1.08em;
+    color: #234765;
+    margin-bottom: 0.5em;
+    padding-bottom: 1em;
+    box-sizing: border-box; }
+    .site-content .col-full nav.woocommerce-breadcrumb a {
+      color: #0c8f87; }
+      .site-content .col-full nav.woocommerce-breadcrumb a::before {
+        color: #234765; }
+        .site-content .col-full nav.woocommerce-breadcrumb a::before:hover {
+          color: #0c8f87;
+          transition: 0.5s ease; }
+      .site-content .col-full nav.woocommerce-breadcrumb a:hover {
+        color: #234765;
+        transition: 0.5s ease;
+        text-decoration: none; }
+
 /*========= modificando con inspeccionador de elementos ========*/
+/*=== Modificando el menu =====*/
+.storefront-primary-navigation {
+  clear: both;
+  background: #ffde00 !important;
+  padding: 0px;
+  margin: 0px; }
+  .storefront-primary-navigation .main-navigation ul li a {
+    color: #234765 !important; }
+    .storefront-primary-navigation .main-navigation ul li a:hover {
+      color: #ffffff; }
+  .storefront-primary-navigation .main-navigation .primary-navigation ul {
+    display: flex; }
+    .storefront-primary-navigation .main-navigation .primary-navigation ul li {
+      list-style: none; }
+      .storefront-primary-navigation .main-navigation .primary-navigation ul li a {
+        font-family: "pakenhamregular";
+        font-size: 1.2em;
+        text-decoration: none;
+        outline: none; }
+        .storefront-primary-navigation .main-navigation .primary-navigation ul li a:hover {
+          background-color: #0c8f87;
+          transition: 0.5s ease;
+          color: #ffffff !important; }
+
+/** ==================== */
 .hentry.type-page .entry-header {
   border-bottom: 0;
   margin-bottom: 0;
-  display: none; }
-
-@media (min-width: 768px) {
-  .storefront-primary-navigation {
-    clear: both;
-    background: #ffde00 !important;
-    margin-left: -99em;
-    margin-right: -99em;
-    padding-left: 99em;
-    padding-right: 99em; } }
+  display: none;
+  background-color: red !important; }
 
 .main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, .site-footer .storefront-handheld-footer-bar a:not(.button),
 button.menu-toggle, button.menu-toggle:hover {
@@ -91,11 +188,34 @@ header .ca-cabecera .ca-search-followers .or-buscador {
   padding: 0px;
   margin: 0px; }
   header .ca-cabecera .ca-search-followers .or-buscador .widget {
-    list-style: none; }
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px !important;
+    box-sizing: border-box; }
     header .ca-cabecera .ca-search-followers .or-buscador .widget form {
-      box-sizing: border-box;
-      margin: 10px;
-      background-color: yellow; }
+      margin: 10px; }
+      header .ca-cabecera .ca-search-followers .or-buscador .widget form:before {
+        display: none; }
+      header .ca-cabecera .ca-search-followers .or-buscador .widget form input[type="search"] {
+        background-color: #ffffff;
+        box-shadow: none;
+        padding: 0.5em 1em !important;
+        color: #234765 !important;
+        border-radius: 5px !important;
+        width: 90% !important; }
+      header .ca-cabecera .ca-search-followers .or-buscador .widget form button[type="submit"] {
+        clip: unset;
+        right: 0px !important;
+        left: auto !important;
+        top: 0px !important;
+        height: 100%;
+        position: absolute;
+        background-color: #0c8f87;
+        border: none;
+        border-radius: 0px !important;
+        outline: none; }
+        header .ca-cabecera .ca-search-followers .or-buscador .widget form button[type="submit"]:hover {
+          transition: 0.5s ease; }
   header .ca-cabecera .ca-search-followers .or-buscador li.widget_product_search {
     list-style: none; }
     header .ca-cabecera .ca-search-followers .or-buscador li.widget_product_search .woocommerce-product-search {
@@ -305,40 +425,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   color: #ffde00;
   font-weight: 600; }
-
-.main-navigation .primary-navigation ul.menu li.menu-item {
-  transition: 0.5s ease;
-  padding-left: 0px;
-  padding-right: 0px; }
-  .main-navigation .primary-navigation ul.menu li.menu-item:hover {
-    background-color: #0c8f87;
-    transition: 0.5s ease;
-    color: #ffffff !important; }
-
-.main-navigation .primary-navigation ul.menu li.current-menu-item a {
-  color: #ffffff !important; }
-
-.main-navigation .primary-navigation ul.menu .current_page_item {
-  background-color: #0c8f87;
-  color: #ffffff;
-  outline: none; }
-
-.main-navigation .primary-navigation ul.menu li {
-  outline: none;
-  padding-left: 0px;
-  padding-right: 0px; }
-  .main-navigation .primary-navigation ul.menu li a {
-    font-size: 1.3em;
-    outline: none; }
-    .main-navigation .primary-navigation ul.menu li a:hover {
-      color: orange; }
-
-.main-navigation ul li {
-  padding-left: 0px;
-  padding-right: 0px; }
-  .main-navigation ul li a:hover {
-    text-decoration: none;
-    color: #ffffff !important; }
 
 footer {
   width: 100%;

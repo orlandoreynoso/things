@@ -53,7 +53,8 @@ gulp.task('browser-sync', function(done) {
     './inc/*.php',
     'libs/*.php',
 		'./incjs/*.js',
-    './*.js'
+    './*.js',
+		'./woocommerce/*.php'
     ];
 
     //initialize browsersync

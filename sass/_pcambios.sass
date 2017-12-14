@@ -12,19 +12,121 @@
       transition: 0.5s ease
       .bread nav a:hover
         color: #234765
+/*========== contenido del sitio ==================*/
+.site-content
+    .col-full
+      width: 100%
+      .content-area
+        .site-main
+          header.woocommerce-products-header
+            display: none
+          .storefront-sorting
+            color: $azul
+          ul.products
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: center
+            li.product
+              margin: 0px auto 10px auto
+              box-sizing: border-box
+              padding-bottom: 12px
+              border-bottom: 1px solid rgba($azul, 0.2)
+              background-color: $yema
+              span.price
+                font-size: 1.5em
+                color: $gris3
+              .added_to_cart
+                background-color: $verde
+                width: 70%
+                margin: 10px auto 0px auto
+                color: $blanco
+                font-weight: normal
+                &:hover
+                  background-color: $azul
+                  color: $blanco
+                  transition: 0.5s ease
+              .woocommerce-LoopProduct-link
+                h2
+                  color: $azul
+                  font-size: 1.3em
+                img
+                  border-radius: none !important
+                  width: 100%
+                  &:hover
+                    opacity: 0.7
+                    transition: 0.5s ease
+              .button
+                background-color: $verde
+                color: $blanco
+                font-size: 1em
+                font-weight: normal
+                width: 75%
+                margin: 0px auto
+                border-radius: 5px
+                &:hover
+                  background-color: $azul
+                  color: $blanco
+                  transition: 0.5s ease
+              a
+                display: block
+                text-decoration: none
+                outline: none
+                color: $azul
+                font-size: 1.2em
+                &:hover
+                  color: $verde
+      nav.woocommerce-breadcrumb
+        font-size: 1.08em
+        color: $azul
+        margin-bottom: 0.5em
+        padding-bottom: 1em
+        box-sizing: border-box
+        a
+          color: $verde
+          &::before
+            color: $azul
+            &:hover
+              color: $verde
+              transition: 0.5s ease
+          &:hover
+            color: $azul
+            transition: 0.5s ease
+            text-decoration: none
 /*========= modificando con inspeccionador de elementos ========*/
+/*=== Modificando el menu =====*/
+.storefront-primary-navigation
+  clear: both
+  background: $yema !important
+  padding: 0px
+  margin: 0px
+  .main-navigation
+    ul
+      li
+        a
+          color: $azul !important
+          &:hover
+            color: $blanco
+    .primary-navigation
+      ul
+        display: flex
+        li
+          list-style: none
+          a
+            font-family: "pakenhamregular"
+            font-size: 1.2em
+            text-decoration: none
+            outline: none
+            &:hover
+              background-color: $verde
+              transition: 0.5s ease
+              color: $blanco !important
+/** ==================== */
 .hentry.type-page .entry-header
   border-bottom: 0
   margin-bottom: 0
   display: none
-@media (min-width: 768px)
-  .storefront-primary-navigation
-    clear: both
-    background: #ffde00 !important
-    margin-left: -99em
-    margin-right: -99em
-    padding-left: 99em
-    padding-right: 99em
+  background-color: red !important
 .main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, .site-footer .storefront-handheld-footer-bar a:not(.button),
 button.menu-toggle, button.menu-toggle:hover
   color: #484c51 !important

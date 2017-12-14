@@ -8,10 +8,33 @@ header
         margin: 0px
         .widget
           list-style: none
+          padding: 0px !important
+          margin: 0px !important
+          box-sizing: border-box
           form
-            box-sizing: border-box
             margin: 10px
-            background-color: yellow
+            &:before
+              display: none
+            input[type="search"]
+              background-color: $blanco
+              box-shadow: none
+              padding: 0.5em 1em !important
+              color: $azul !important
+              border-radius: 5px !important
+              width: 90% !important
+            button[type="submit"]
+              clip: unset
+              right: 0px !important
+              left: auto !important
+              top: 0px !important
+              height: 100%
+              position: absolute
+              background-color: $verde
+              border: none
+              border-radius: 0px !important
+              outline: none
+              &:hover
+                transition: 0.5s ease
         li.widget_product_search
           list-style: none
           .woocommerce-product-search
