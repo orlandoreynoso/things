@@ -1,15 +1,14 @@
 {
   "name": "masprenda",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-sass": "^3.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp": "^3.9.1"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,5 +16,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orlandoreynoso/things.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orlandoreynoso/things/issues"
+  },
+  "homepage": "https://github.com/orlandoreynoso/things#readme",
+  "description": ""
 }
