@@ -60,7 +60,7 @@ gulp.task('browser-sync', function(done) {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "localhost/prendas/",
+    proxy: "localhost/trytwo/",
     notify: false
     });
 
