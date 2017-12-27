@@ -39,26 +39,23 @@ function somos(){ ?>
 /*========= FUNCION slidesr*/
 
 function or_slider(){
+
 ?>
-<div class="container">
-  <div class="slide">
-      <div class="row">
-        <div class="col-md-12">
-          <?php
-           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
-          ?>
-          <?php
-            echo do_shortcode("[metaslider id=92]");
-          ?>
-        </div>
-      </div>
-  </div>
+<div class="c-slider">
+	  <div class="slide">
+	          <?php
+	           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
+	          ?>
+	          <?php //echo do_shortcode("[metaslider id=92]");     ?>
+	          <?php   echo do_shortcode("[metaslider id=49]");     ?>
+	  </div>
 </div>
 <?php
 
 }
 add_action( 'homepage', 'or_slider',9);
-/*========= agregar informacion extra en el home page ===*/
+
+/*
 function or_somos(){
   ?>
   <h1>Hola</h1>
@@ -67,6 +64,7 @@ function or_somos(){
 }
 
 add_action( 'homepage','or_somos', 11);
+*/
 
 function estilos_woo(){
 /*

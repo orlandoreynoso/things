@@ -29,8 +29,7 @@
 .site-content .col-full {
   width: 100%; }
   .site-content .col-full .content-area .site-main {
-    padding-top: 0px;
-    background-color: red; }
+    padding-top: 0px; }
     .site-content .col-full .content-area .site-main header.woocommerce-products-header {
       display: none; }
     .site-content .col-full .content-area .site-main .storefront-sorting {
@@ -428,6 +427,17 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   color: #ffde00;
   font-weight: 600; }
+
+.site-main .c-slider {
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box; }
+  .site-main .c-slider .slide {
+    width: 100%;
+    height: 100%; }
+    .site-main .c-slider .slide img {
+      border-radius: 0px;
+      height: 100%; }
 
 footer {
   width: 100%;
