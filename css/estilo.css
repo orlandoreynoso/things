@@ -273,9 +273,6 @@ header.site-header {
     width: 100%; }
 
 /*============================*/
-.home .site .site-content .col-full {
-  display: none; }
-
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
   box-sizing: border-box;
@@ -524,7 +521,6 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   box-sizing: border-box;
   padding: 0px;
-  height: 100vh;
   background-color: red; }
   .c-slider .slide {
     width: 100%;
