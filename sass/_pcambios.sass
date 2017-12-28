@@ -222,15 +222,49 @@ header.site-header
 .pre-somos
   background-image: url("../images/nastuh-abootalebi-284884.jpg")
   background-size: cover
-  padding: 150px 20px
+  padding: 200px 60px
   background-position: center center
   margin-bottom: 30px
-  margin-top: 30px
-  p
-    color: $yema
-    font-size: 1.5em
-    font-weight: 700
-    text-shadow: 1px 1px 2px rgba(#333, 1);
-    font-family: 'pakenhamregular'
-  @media screen and (max-width: 768px) /* de 0 768**/
-    padding: 15px
+  margin-top: 0px
+  position: relative
+  @media screen and (max-width: 600px) /* de 0 600**/      
+    height: 520px
+  .pre-contenido
+    width: var(--sizem)
+    position: absolute
+    top: calc(var(--sizem)/2.9)
+    left: 0
+    right: 0
+    padding: 0px 150px
+    p
+      color: $yema
+      font-size: 1.6em
+      font-weight: 700
+      text-shadow: 1px 1px 2px rgba(#333, 1)
+      text-align: center
+      font-family: 'pakenhamregular'
+    @media screen and (max-width: 600px) /* de 0 600**/      
+      top: calc(var(--sizem)/15)
+      bottom: 0
+      padding: 0px 15px
+      height: 100%  
+    @media screen and (min-width: 601px) and (max-width: 768px) /*entre 601  de 0 768**/
+      padding: 15px
+      top: calc(var(--sizem)/4)
+      p
+        font-size: 1.5em
+  &:before
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background-color: rgba($verde, 0.5)
+    content: ""
+    width: 100%
+/*============================*/    
+.home
+  .site
+    .site-content
+      .col-full
+        display: none

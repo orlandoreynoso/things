@@ -27,59 +27,22 @@ function menus_generales(){
 add_action('init','menus_generales');
 
 /*======== funciton somos ======*/
-function somos(){  /*
-  <div class="container">
-    <section class="cover-publicidad">
-      <?php get_template_part( 'template/cover','somos' )?>
-    </section>
-  </div>
-  */
-  
-  ?>
-  		</main>
-  	</div><!-- .primary -->
-  </div><!-- col-full -->
-<div class="pre-somos">
-	<?php 
-	 $the_query = new WP_Query( 
-		array(
-		'post_name' => 'Inicio',
-		'order' => 'DESC',
-		'orderby' => 'date'
-	)); 
-	?>
-	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-	<?php  the_content(); 
-	
-	endwhile;
-	wp_reset_postdata();
-	?>
 
-</div>
-  <div class="col-full">
-	<div class="content-area">
-		<div class="site-main">
-  <?php
+function create_pagename($pagename){
+    $array = array(
+        'pagename' => ''.$pagename.''
+        );
+    return $array;
 }
 
-add_action( 'homepage','somos', 15);
-/*========= FUNCION slidesr*/
+function or_somos(){   get_template_part( 'template/cover','somos');  }
+add_action( 'homepage','or_somos', 15);
 
-function or_slider(){
-
-?>
-<div class="c-slider">
-	  <div class="slide">
-	          <?php
-	           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
-	          ?>
-	          <?php //echo do_shortcode("[metaslider id=92]");     ?>
-	          <?php   echo do_shortcode("[metaslider id=49]");     ?>
-	  </div>
-</div>
-<?php
-
+function no_bread(){
+	remove_action('woocommerce_breadcrumb');
 }
+
+function or_slider(){ get_template_part( 'template/cover','slide'); }
 add_action( 'homepage', 'or_slider',9);
 
 /*
@@ -176,7 +139,8 @@ function deletear(){
 	//remove_action('storefront_header','storefront_primary_navigation',50);
 	//remove_action('storefront_header','storefront_header_cart',60);
 	//remove_action('storefront_header','storefront_primary_navigation_wrapper_close',68);
-
+	remove_action( 'homepage','storefront_homepage_content', 10 );
+	remove_action( 'homepage','woocommerce_breadcrumb',1);
 }
 /*
 

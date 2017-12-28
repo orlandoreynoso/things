@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* @media screen and ( min-width: 641px ) ocultar de 641px hasta infinito  para que se muestre el menu */
 /* @media screen and ( max-width: 640px ) 0 a 640px para movil ò de 640 a 0 */
+:root {
+  --sizem: 100%; }
+
 @font-face {
   font-family: 'pakenhamregular';
   src: url("fonts/pakenham_rg-webfont.woff2") format("woff2"), url("fonts/pakenham_rg-webfont.woff") format("woff");
@@ -225,19 +228,53 @@ header.site-header {
 .pre-somos {
   background-image: url("../images/nastuh-abootalebi-284884.jpg");
   background-size: cover;
-  padding: 150px 20px;
+  padding: 200px 60px;
   background-position: center center;
   margin-bottom: 30px;
-  margin-top: 30px; }
-  .pre-somos p {
-    color: #ffde00;
-    font-size: 1.5em;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #333333;
-    font-family: 'pakenhamregular'; }
-  @media screen and (max-width: 768px) {
+  margin-top: 0px;
+  position: relative; }
+  @media screen and (max-width: 600px) {
     .pre-somos {
-      padding: 15px; } }
+      height: 520px; } }
+  .pre-somos .pre-contenido {
+    width: var(--sizem);
+    position: absolute;
+    top: calc(var(--sizem)/2.9);
+    left: 0;
+    right: 0;
+    padding: 0px 150px; }
+    .pre-somos .pre-contenido p {
+      color: #ffde00;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #333333;
+      text-align: center;
+      font-family: 'pakenhamregular'; }
+    @media screen and (max-width: 600px) {
+      .pre-somos .pre-contenido {
+        top: calc(var(--sizem)/15);
+        bottom: 0;
+        padding: 0px 15px;
+        height: 100%; } }
+    @media screen and (min-width: 601px) and (max-width: 768px) {
+      .pre-somos .pre-contenido {
+        padding: 15px;
+        top: calc(var(--sizem)/4); }
+        .pre-somos .pre-contenido p {
+          font-size: 1.5em; } }
+  .pre-somos:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(12, 143, 135, 0.5);
+    content: "";
+    width: 100%; }
+
+/*============================*/
+.home .site .site-content .col-full {
+  display: none; }
 
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
@@ -483,16 +520,28 @@ input[type=number]::-webkit-outer-spin-button {
   color: #ffde00;
   font-weight: 600; }
 
-.site-main .c-slider {
+.c-slider {
   width: 100%;
-  padding-top: 20px;
-  box-sizing: border-box; }
-  .site-main .c-slider .slide {
+  box-sizing: border-box;
+  padding: 0px;
+  height: 100vh;
+  background-color: red; }
+  .c-slider .slide {
     width: 100%;
-    height: 100%; }
-    .site-main .c-slider .slide img {
-      border-radius: 0px;
+    height: 100%;
+    padding: 0px; }
+    .c-slider .slide .metaslider {
       height: 100%; }
+      .c-slider .slide .metaslider .flexslider {
+        margin: 0px auto;
+        height: 100%; }
+        .c-slider .slide .metaslider .flexslider ol.flex-control-nav {
+          background-color: magenta;
+          bottom: 0;
+          display: none; }
+      .c-slider .slide .metaslider img {
+        border-radius: 0px;
+        height: 100%; }
 
 footer {
   width: 100%;
