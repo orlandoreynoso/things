@@ -27,15 +27,42 @@ function menus_generales(){
 add_action('init','menus_generales');
 
 /*======== funciton somos ======*/
-function somos(){ ?>
+function somos(){  /*
   <div class="container">
     <section class="cover-publicidad">
       <?php get_template_part( 'template/cover','somos' )?>
     </section>
   </div>
+  */
+  
+  ?>
+  		</main>
+  	</div><!-- .primary -->
+  </div><!-- col-full -->
+<div class="pre-somos">
+	<?php 
+	 $the_query = new WP_Query( 
+		array(
+		'post_name' => 'Inicio',
+		'order' => 'DESC',
+		'orderby' => 'date'
+	)); 
+	?>
+	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+	<?php  the_content(); 
+	
+	endwhile;
+	wp_reset_postdata();
+	?>
+
+</div>
+  <div class="col-full">
+	<div class="content-area">
+		<div class="site-main">
   <?php
 }
 
+add_action( 'homepage','somos', 15);
 /*========= FUNCION slidesr*/
 
 function or_slider(){
