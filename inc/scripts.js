@@ -12,8 +12,12 @@ var waypoint = new Waypoint({
 
 $(document).ready(function() {
 
+/*Tamaños de las pantallas*/
 
-
+  var div_ancho = $("#masthead").width();
+  var div_alto = $("#masthead").height();
+  console.log("ancho es: "+div_ancho+"alto es: "+div_alto);
+  
 /*==== ver ancho de la pagina*/
 
 var ancho = (document.body.clientWidth);

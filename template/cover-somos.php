@@ -30,7 +30,9 @@
 		echo "No encontramos contenido de: ".$pagename."";
 	}
 		?>
+
 		</div>
+		<a class="btn-somos" href="<?php echo esc_url( home_url( '/' ) ); ?>acerca-de">ingresar</a>
 	</div>
 	  <div class="col-full">
 		<div class="content-area">

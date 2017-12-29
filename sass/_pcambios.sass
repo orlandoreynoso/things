@@ -220,19 +220,39 @@ header.site-header
 
 /*=================== estilo de mi somos ==============*/
 .pre-somos
-  background-image: url("../images/nastuh-abootalebi-284884.jpg")
-  background-size: cover
-  padding: 200px 60px
-  background-position: center center
+  background-color: $azul
+  padding: 80px 60px
   margin-bottom: 30px
   margin-top: 0px
-  position: relative
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
   @media screen and (max-width: 600px) /* de 0 600**/      
-    height: 520px
+    height: auto
+  .btn-somos
+    background-color: $yema
+    padding: 1.2em 2.5em
+    border-radius: 4px
+    transition: 0.5s ease
+    border: 1px solid $yema
+    outline: none
+    display: block
+    color: $azul
+    text-decoration: none
+    font-size: 1.2em
+    font-weight: bold
+    text-transform: capitalize
+    outline: none
+    display: block
+    &:hover
+      background-color: $azul
+      transition: 0.5s ease
+      cursor: pointer
+      border: 1px solid $yema
+      color: $yema
   .pre-contenido
     width: var(--sizem)
-    position: absolute
-    top: calc(var(--sizem)/2.9)
     left: 0
     right: 0
     padding: 0px 150px
@@ -244,7 +264,6 @@ header.site-header
       text-align: center
       font-family: 'pakenhamregular'
     @media screen and (max-width: 600px) /* de 0 600**/      
-      top: calc(var(--sizem)/15)
       bottom: 0
       padding: 0px 15px
       height: 100%  
@@ -253,6 +272,7 @@ header.site-header
       top: calc(var(--sizem)/4)
       p
         font-size: 1.5em
+/*  
   &:before
     position: absolute
     top: 0
@@ -261,9 +281,114 @@ header.site-header
     bottom: 0
     background-color: rgba($verde, 0.5)
     content: ""
-    width: 100%
+    width: 100%*/
 /*============================*/    
-.home
+body.home
+  #page
+    .site-content
+      .col-full
+        .woocommerce-breadcrumb
+          display: none
+        .content-area
+          margin-bottom: 0px
+          .site-main
+            margin-bottom: 0px
+        .woocommerce
+      &:before
+        background-color: black
+        padding: 20px
+        display: none
+/*=========cantidad en el input=========================*/        
+table.cart 
+  td.product-quantity 
+    .qty
+      color: $azul !important
+/*====== btn de finaliza compra*/      
+.cart_totals
+  .wc-proceed-to-checkout
+    a
+      border-radius: 4px
+      background-color: $azul !important
+      text-decoration: none
+      color: $blanco
+      display: block
+      outline: none
+      &:hover
+        background-color: $yema !important
+        transition: 0.5s ease
+        color: $azul
+.woocommerce
+  form.woocommerce-checkout
+    .col2-set
+      .col-1
+        max-width: 100% !important
+/*======= finalizando compra=======*/
+body.woocommerce-checkout
   .site
     .site-content
       .col-full
+        .content-area
+          width: 100%
+          .site-main
+            .entry-content
+              .woocommerce
+                .woocommerce-checkout
+                  .col2-set
+                    .col-1
+                      width: 100% !important
+                    .col-2
+                      width: 100% !important
+                      padding-bottom: 20px
+                      padding-top: 20px
+                      box-sizing: border-box
+                      max-width: 100% !important
+        .widget-area
+          display: none !important
+/*=========== div carrito en navegación ==============*/          
+.storefront-primary-navigation
+  ul.site-header-cart
+    li
+      outline: none
+      a.cart-contents
+        outline: none
+      .widget
+        .widget_shopping_cart_content
+          a
+            outline: none
+            text-decoration: none
+    .widget_shopping_cart
+      .widget_shopping_cart_content
+        .a
+          outline: none
+/*============== finalizar-compra =====================*/
+#payment 
+  .place-order 
+    .button
+      background-color: $azul
+      color: $blanco
+      transition: 0.5s ease
+      border-radius: 4px
+      &:hover
+        background-color: $yema
+        transition: 0.5s ease
+        color: $azul
+/*== color link ====*/        
+.woocommerce-checkout-review-order
+  background-color: red !important
+  .woocommerce-checkout-payment
+    background-color: $yema
+    .wc_payment_methods
+      li.wc_payment_method
+        label
+          color: $azul !important
+    .place-order  
+      .terms
+        a
+          outline: none
+          text-decoration: none
+          font-weight: bold
+          color: $azul
+          transition: 0.5s ease
+          &:hover
+            color: $verde
+            transition: 0.5s ease

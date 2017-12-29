@@ -226,20 +226,40 @@ header.site-header {
 
 /*=================== estilo de mi somos ==============*/
 .pre-somos {
-  background-image: url("../images/nastuh-abootalebi-284884.jpg");
-  background-size: cover;
-  padding: 200px 60px;
-  background-position: center center;
+  background-color: #234765;
+  padding: 80px 60px;
   margin-bottom: 30px;
   margin-top: 0px;
-  position: relative; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
   @media screen and (max-width: 600px) {
     .pre-somos {
-      height: 520px; } }
+      height: auto; } }
+  .pre-somos .btn-somos {
+    background-color: #ffde00;
+    padding: 1.2em 2.5em;
+    border-radius: 4px;
+    transition: 0.5s ease;
+    border: 1px solid #ffde00;
+    outline: none;
+    display: block;
+    color: #234765;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+    outline: none;
+    display: block; }
+    .pre-somos .btn-somos:hover {
+      background-color: #234765;
+      transition: 0.5s ease;
+      cursor: pointer;
+      border: 1px solid #ffde00;
+      color: #ffde00; }
   .pre-somos .pre-contenido {
     width: var(--sizem);
-    position: absolute;
-    top: calc(var(--sizem)/2.9);
     left: 0;
     right: 0;
     padding: 0px 150px; }
@@ -252,7 +272,6 @@ header.site-header {
       font-family: 'pakenhamregular'; }
     @media screen and (max-width: 600px) {
       .pre-somos .pre-contenido {
-        top: calc(var(--sizem)/15);
         bottom: 0;
         padding: 0px 15px;
         height: 100%; } }
@@ -262,17 +281,106 @@ header.site-header {
         top: calc(var(--sizem)/4); }
         .pre-somos .pre-contenido p {
           font-size: 1.5em; } }
-  .pre-somos:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(12, 143, 135, 0.5);
-    content: "";
-    width: 100%; }
 
+/*
+  &:before
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background-color: rgba($verde, 0.5)
+    content: ""
+    width: 100%*/
 /*============================*/
+body.home #page .site-content .col-full .woocommerce-breadcrumb {
+  display: none; }
+
+body.home #page .site-content .col-full .content-area {
+  margin-bottom: 0px; }
+  body.home #page .site-content .col-full .content-area .site-main {
+    margin-bottom: 0px; }
+
+body.home #page .site-content:before {
+  background-color: black;
+  padding: 20px;
+  display: none; }
+
+/*=========cantidad en el input=========================*/
+table.cart td.product-quantity .qty {
+  color: #234765 !important; }
+
+/*====== btn de finaliza compra*/
+.cart_totals .wc-proceed-to-checkout a {
+  border-radius: 4px;
+  background-color: #234765 !important;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  outline: none; }
+  .cart_totals .wc-proceed-to-checkout a:hover {
+    background-color: #ffde00 !important;
+    transition: 0.5s ease;
+    color: #234765; }
+
+.woocommerce form.woocommerce-checkout .col2-set .col-1 {
+  max-width: 100% !important; }
+
+/*======= finalizando compra=======*/
+body.woocommerce-checkout .site .site-content .col-full .content-area {
+  width: 100%; }
+  body.woocommerce-checkout .site .site-content .col-full .content-area .site-main .entry-content .woocommerce .woocommerce-checkout .col2-set .col-1 {
+    width: 100% !important; }
+  body.woocommerce-checkout .site .site-content .col-full .content-area .site-main .entry-content .woocommerce .woocommerce-checkout .col2-set .col-2 {
+    width: 100% !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    max-width: 100% !important; }
+
+body.woocommerce-checkout .site .site-content .col-full .widget-area {
+  display: none !important; }
+
+/*=========== div carrito en navegación ==============*/
+.storefront-primary-navigation ul.site-header-cart li {
+  outline: none; }
+  .storefront-primary-navigation ul.site-header-cart li a.cart-contents {
+    outline: none; }
+  .storefront-primary-navigation ul.site-header-cart li .widget .widget_shopping_cart_content a {
+    outline: none;
+    text-decoration: none; }
+
+.storefront-primary-navigation ul.site-header-cart .widget_shopping_cart .widget_shopping_cart_content .a {
+  outline: none; }
+
+/*============== finalizar-compra =====================*/
+#payment .place-order .button {
+  background-color: #234765;
+  color: #ffffff;
+  transition: 0.5s ease;
+  border-radius: 4px; }
+  #payment .place-order .button:hover {
+    background-color: #ffde00;
+    transition: 0.5s ease;
+    color: #234765; }
+
+/*== color link ====*/
+.woocommerce-checkout-review-order {
+  background-color: red !important; }
+  .woocommerce-checkout-review-order .woocommerce-checkout-payment {
+    background-color: #ffde00; }
+    .woocommerce-checkout-review-order .woocommerce-checkout-payment .wc_payment_methods li.wc_payment_method label {
+      color: #234765 !important; }
+    .woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order .terms a {
+      outline: none;
+      text-decoration: none;
+      font-weight: bold;
+      color: #234765;
+      transition: 0.5s ease; }
+      .woocommerce-checkout-review-order .woocommerce-checkout-payment .place-order .terms a:hover {
+        color: #0c8f87;
+        transition: 0.5s ease; }
+
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
   box-sizing: border-box;
@@ -519,9 +627,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .c-slider {
   width: 100%;
-  box-sizing: border-box;
-  padding: 0px;
-  background-color: red; }
+  box-sizing: border-box; }
   .c-slider .slide {
     width: 100%;
     height: 100%;
