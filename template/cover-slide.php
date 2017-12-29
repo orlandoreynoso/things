@@ -7,7 +7,7 @@
 </div><!-- col-full -->
 */ ?>
 
-<div class="c-slider">
+<div class="c-slider" id="pre-slider">
 	  <div class="slide">
 	          <?php
 	           // Este es para la pagina oficial echo do_shortcode("[metaslider id=188]");
