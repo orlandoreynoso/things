@@ -12,6 +12,14 @@ var waypoint = new Waypoint({
 
 $(document).ready(function() {
 
+  $('.bxslider').bxSlider({
+    auto: true,
+    mode: 'fade',
+    captions: true,
+    slideWidth: 600
+  });
+
+
 /*Tamaños de las pantallas*/
 
   var div_ancho = $("#masthead").width();
