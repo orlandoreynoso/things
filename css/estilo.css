@@ -628,22 +628,30 @@ input[type=number]::-webkit-outer-spin-button {
 .c-slider {
   width: 100%;
   box-sizing: border-box; }
-  .c-slider .slide {
+  .c-slider .bx-wrapper {
+    background-color: red;
+    padding: 20px;
     width: 100%;
     height: 100%;
-    padding: 0px; }
-    .c-slider .slide .metaslider {
-      height: 100%; }
-      .c-slider .slide .metaslider .flexslider {
-        margin: 0px auto;
-        height: 100%; }
-        .c-slider .slide .metaslider .flexslider ol.flex-control-nav {
-          background-color: magenta;
-          bottom: 0;
-          display: none; }
-      .c-slider .slide .metaslider img {
-        border-radius: 0px;
-        height: 100%; }
+    max-width: 100% !important; }
+    .c-slider .bx-wrapper .bx-viewport {
+      background-color: green;
+      padding: 20px; }
+      .c-slider .bx-wrapper .bx-viewport .bxslider {
+        background-color: magenta;
+        padding: 5px;
+        width: 100% !important;
+        height: 100% !important; }
+        .c-slider .bx-wrapper .bx-viewport .bxslider div {
+          background-color: cyan;
+          padding: 20px;
+          width: 100% !important; }
+          .c-slider .bx-wrapper .bx-viewport .bxslider div img {
+            width: 100% !important;
+            height: auto; }
+    .c-slider .bx-wrapper .bx-controls {
+      background-color: orange;
+      padding: 20px; }
 
 footer {
   width: 100%;

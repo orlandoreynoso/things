@@ -23,7 +23,7 @@
 */ ?>
 
 
- <div class="c-slider">
+ <div class="c-slider" id="pre-slider">
 	<div class="bxslider">
  	<?php 
 

@@ -37,16 +37,12 @@ var alto = (document.body.clientHeight);
 var valor = ventana_alto - div_alto;
 console.log("valor: "+valor);
 var slider = $("#pre-slider").height();
-
-//slider.height('100vh' - div_alto);
-
-//$('.c-slider').css('height', '100vh');
-//calc(100% - 30px);
+/*
 $('.c-slider').css('height',valor+'px');
 $('body .metaslider .flexslider .slides img').css('height',valor+'px');
-//$('.c-slider').height(calc('100% - 10%'));
 
-//console.log(valores);
+*/
+
 console.log("jugo: "+slider);
 
 console.log("el ancho es: "+ ancho +  " Y el alto " + alto);
