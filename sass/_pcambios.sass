@@ -13,6 +13,7 @@
       .bread nav a:hover
         color: #234765
 /*========== contenido del sitio ==================*/
+/*== ajustando botones en la pagina tienda*/
 .site-content
     .col-full
       .content-area
@@ -42,6 +43,7 @@
                 margin: 10px auto 0px auto
                 color: $blanco
                 font-weight: normal
+                border-radius: 4px
                 &:hover
                   background-color: $azul
                   color: $blanco
@@ -93,11 +95,118 @@
             color: $azul
             transition: 0.5s ease
             text-decoration: none
+/*========== en el producto =====*/
+.content-area
+  .site-main
+    .product
+      .summary
+        .product_meta
+          span
+            color: $azul
+            a
+              outline: none
+              color: $verde
+              font-weight: 400
+              text-decoration: none
+              margin-left: 3px
+              &:hover
+                color: $azul
+                transition: 0.5s ease
+        form
+          .button.alt
+            background-color: $azul !important
+            padding-left: 10px
+            padding-right: 10px
+            transition: 0.5s ease
+            outline: none
+            &:hover
+              background-color: $verde !important
+              color: $blanco
+              transition: 0.5s ease
+          .quantity
+            input[type="number"]
+              color: $azul
+              border: 1px solid $azul
+        .product_title
+          color: $verde
+          position: relative
+          &:before
+            position: absolute
+            content: ""
+            width: calc(var(--sizem)/10)
+            height: 2px
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: $azul
+      .related
+        h2
+          color: $verde
+          position: relative
+          &:before
+            position: absolute
+            content: ""
+            width: calc(var(--sizem)/10)
+            height: 2px
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: $azul        
+      .woocommerce-tabs
+        .woocommerce-Tabs-panel
+          h2
+            color: $verde
+            position: relative
+            &:before
+              position: absolute
+              content: ""
+              width: calc(var(--sizem)/10)
+              height: 2px
+              bottom: 0
+              left: 0
+              right: 0
+              background-color: $azul            
+          .woocommerce-Reviews
+            .woocommerce-noreviews
+              background-color: $verde
+        ul.tabs
+          li.active
+            a
+              color: $verde !important
+              position: relative
+              &:after
+                bottom: 0
+                content: ""
+                height: 2px
+                background-color: $verde
+                left: 0
+                width: 100%
+                position: absolute
+        ul
+          li
+            a
+              outline: none
+              color: $verde
+              transition: 0.5s ease
+              padding-left: 10px            
+              &:hover
+                color: $azul
+                transition: 0.5s ease
+                text-decoration: none
+              &:after
+                color: $verde  
 /*======== Comprar por categoria =======*/
 .woocommerce
+  .woocommerce-message
+    background-color: $azul
+    a.button
+      color: $yema
+      &:hover
+        transition: 0.5s ease
+        color: $blanco
+        text-decoration: none
   ul.products
     li.product-category
-      background-color: red
       &:hover
         background-color: green        
       a
@@ -152,7 +261,6 @@
   border-bottom: 0
   margin-bottom: 0
   display: none
-  background-color: red !important
 .main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a, .site-footer .storefront-handheld-footer-bar a:not(.button),
 button.menu-toggle, button.menu-toggle:hover
   color: #484c51 !important
@@ -184,22 +292,27 @@ header.site-header
   .storefront-primary-navigation
     .main-navigation
       .menu-toggle
-        background-color: $verde
-        color: $blanco
+        background-color: $yema
+        color: $azul !important 
         border: 2px solid $yema
         font-size: 1.2em
+        outline: none
         span
-          color: $blanco
+          color: $azul !important
       .menu
         box-sizing: border-box
         ul
           li
-            background-color: $celeste
+            background-color: $yema
             box-sizing: border-box
             padding-left: 10px
+            border-bottom: 1px solid $azul
             a
               color: $blanco
               font-size: 1.2em
+              text-decoration: none
+              &:hover
+                color: $verde !important
           .current_page_item
             background-color: $yema
 /*====== texto bievenida portada ===*/
@@ -336,6 +449,8 @@ body.woocommerce-checkout
                   .col2-set
                     .col-1
                       width: 100% !important
+                      input[type="tel"]
+                        background-color: #f2f2f2
                     .col-2
                       width: 100% !important
                       padding-bottom: 20px
@@ -360,23 +475,50 @@ body.woocommerce-checkout
       .widget_shopping_cart_content
         .a
           outline: none
+/*=== Información de cupones y otras cosas ya al finalizar la compra ====*/
+.woocommerce-info
+  background-color: $verde !important
+  .showcoupon
+    color: $blanco
+    margin-left: 10px
+    &:hover
+      color: $yema
+      opacity: 1
+      text-decoration: none
+      font-weight: 300
+      margin-left: 10px
+      transition: 0.5s ease
+  a
+    color: $blanco
+    &:hover
+      color: $yema
 /*============== finalizar-compra =====================*/
 #payment 
+  .payment_methods
+    li
+      input
+      label
+        color: $yema !important
+    >.wc_payment_method
+      >label
+        box-sizing: border-box
+        color: $azul !important
+        &::before
+          color: $azul
   .place-order 
     .button
       background-color: $azul
       color: $blanco
       transition: 0.5s ease
       border-radius: 4px
+      outline: none
       &:hover
         background-color: $yema
         transition: 0.5s ease
         color: $azul
 /*== color link ====*/        
 .woocommerce-checkout-review-order
-  background-color: red !important
   .woocommerce-checkout-payment
-    background-color: $yema
     .wc_payment_methods
       li.wc_payment_method
         label
@@ -392,3 +534,36 @@ body.woocommerce-checkout
           &:hover
             color: $verde
             transition: 0.5s ease
+/*=====================================*/
+.star-rating span:before, .quantity .plus, .quantity .minus, p.stars a:hover:after, p.stars a:after, .star-rating span:before, #payment .payment_methods li input[type=radio]:first-child:checked+label:before
+  color: $verde !important
+
+/*======= detalles del pedido*/
+.woocommerce-order-details
+  table
+    a
+      color: $azul
+      font-weight: bold
+      &:hover
+        color: $verde
+        transition: 0.5s ease
+        text-decoration: none
+/*======= carrito vacio =====*/        
+.entry-content
+  .woocommerce
+    .cart-empty
+      color: red
+      font-weight: 700
+      font-size: 1.3em
+    .return-to-shop
+      a
+        background-color: $azul
+        color: $blanco
+        outline: none
+        transition: 0.5s ease
+        border-radius: 4px
+        &:hover
+          background-color: $yema
+          transition: 0.5s ease
+          color: $azul
+          text-decoration: none
