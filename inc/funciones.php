@@ -32,6 +32,21 @@ function storefront_display_custom_logo() {
 }
 
 
+function footer_mas(){?>
+	<div class="info-mas">
+		<div class="texto">
+			<p>Teléfonos: (502) 7755 - 1863 | (502) 5986 - 0818</p>
+			<p>Dirección: 4a. Avenida 8-39 zona 1</p>
+			<p>Santa Cruz del Quiche, El Quiché</p>
+		</div>
+		<div class="info-credito">
+			<p>Desarrollado por: <a href="http://www.orlandoreynoso.com">Orlando Reynoso</a></p>
+		</div>
+	</div>
+<?php
+}
+add_action('storefront_footer', 'footer_mas',8);
+
 function or_slider(){ get_template_part( 'template/cover','slide'); }
 add_action( 'homepage', 'or_slider',9);
 
