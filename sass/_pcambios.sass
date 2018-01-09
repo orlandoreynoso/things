@@ -140,7 +140,7 @@
             right: 0
             background-color: $azul
       .related
-        h2
+        >h2:first-child
           color: $verde
           position: relative
           &:before
@@ -567,3 +567,14 @@ body.woocommerce-checkout
           transition: 0.5s ease
           color: $azul
           text-decoration: none
+/*===============================*/
+footer.site-footer
+  background-color: $azul
+  color: $blanco
+  a
+    color: $yema !important
+    transition: 0.5s ease
+    &:hover
+      color: $celeste !important
+      transition: 0.5s ease
+      text-decoration: none

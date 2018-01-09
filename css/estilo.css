@@ -150,10 +150,10 @@
     right: 0;
     background-color: #234765; }
 
-.content-area .site-main .product .related h2 {
+.content-area .site-main .product .related > h2:first-child {
   color: #0c8f87;
   position: relative; }
-  .content-area .site-main .product .related h2:before {
+  .content-area .site-main .product .related > h2:first-child:before {
     position: absolute;
     content: "";
     width: calc(var(--sizem)/10);
@@ -547,6 +547,18 @@ body.woocommerce-checkout .site .site-content .col-full .widget-area {
     transition: 0.5s ease;
     color: #234765;
     text-decoration: none; }
+
+/*===============================*/
+footer.site-footer {
+  background-color: #234765;
+  color: #ffffff; }
+  footer.site-footer a {
+    color: #ffde00 !important;
+    transition: 0.5s ease; }
+    footer.site-footer a:hover {
+      color: #0da5e4 !important;
+      transition: 0.5s ease;
+      text-decoration: none; }
 
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
