@@ -869,21 +869,34 @@ input[type=number]::-webkit-outer-spin-button {
   flex-wrap: wrap;
   justify-content: space-between;
   width: var(--sizem);
-  box-sizing: border-box;
-  min-height: 300px; }
+  box-sizing: border-box; }
   @media screen and (max-width: 600px) {
     .who-we-are {
       width: var(--sizem); } }
+  .who-we-are .intro {
+    max-width: 1063px;
+    margin: 0px auto;
+    padding: 0px 0px 10px; }
+    .who-we-are .intro h2 {
+      color: #234765;
+      text-align: center;
+      margin-bottom: 20px; }
+    .who-we-are .intro p {
+      font-size: 1.1em; }
   .who-we-are .cover-who {
-    width: 50%; }
+    width: calc(var(--sizem)/2);
+    height: 250px; }
     .who-we-are .cover-who img {
-      width: var(--sizem);
-      height: auto; }
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0px; }
     @media screen and (max-width: 600px) {
       .who-we-are .cover-who {
         width: var(--sizem); } }
   .who-we-are .content-who {
-    width: 50%; }
+    width: calc(var(--sizem)/2);
+    padding-left: 20px; }
     @media screen and (max-width: 600px) {
       .who-we-are .content-who {
         width: var(--sizem); } }

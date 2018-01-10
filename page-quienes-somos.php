@@ -15,17 +15,25 @@ get_header(); ?>
 
 	</div>
 	</div>
+
+<div class="site-content">
+	<div class="col-full">
+
+
 	<div class="who-we-are">
+		<div class="intro">
+			<h2><?php the_title(); ?></h2>
+			<p>Somos una empresa que provee servicios financieros para inversión en negocios y necesidades personales y familiares, con garantía prendaria, proveído por un personal capacitado y comprometido con un servicio de excelencia y buscando siempre dar mayores beneficios a un costo accesible. </p>
+			<h2>PRINCIPALES SERVICIOS QUE BRINDA CREDIEMPEÑOS</h2>			
+		</div>
 		<div class="cover-who">
 			<?php the_post_thumbnail(); ?>			
 		</div>
 		<div class="content-who">
+			<h2>ESTRATEGIAS Y ACCIONES DE MERCADEO</h2>			
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam obcaecati minima expedita saepe ut, inventore, iste exercitationem repellendus quisquam non, perferendis nesciunt id molestiae cumque porro rerum animi doloremque beatae.</p>
 		</div>
 	</div>
-
-<div class="site-content">
-	<div class="col-full">
 		
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
