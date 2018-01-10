@@ -32,7 +32,7 @@
 		?>
 
 		</div>
-		<a class="btn-somos" href="<?php echo esc_url( home_url( '/' ) ); ?>acerca-de">ingresar</a>
+		<a class="btn-somos" href="<?php echo esc_url( home_url( '/' ) ); ?>quienes-somos">ingresar</a>
 	</div>
 	  <div class="col-full">
 		<div class="content-area">

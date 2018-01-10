@@ -31,8 +31,23 @@ function storefront_display_custom_logo() {
 <?php
 }
 
+/*============= sidebar================*/
+function sidebar_cre(){
+	echo "Aqui estoy en mi sidebar para facebokk";
+}
 
+add_action('storefront_sidebar', 'sidebar_cre',8);
+
+/*========= footer ========================*/
 function footer_mas(){?>
+<?php 
+
+	remove_action('storefront_footer','storefront_footer_widgets',10);
+	remove_action('storefront_footer','storefront_credit',20);	
+	
+	
+
+?>
 	<div class="info-mas">
 		<div class="texto">
 			<p>Teléfonos: (502) 7755 - 1863 | (502) 5986 - 0818</p>
@@ -40,7 +55,8 @@ function footer_mas(){?>
 			<p>Santa Cruz del Quiche, El Quiché</p>
 		</div>
 		<div class="info-credito">
-			<p>Desarrollado por: <a href="http://www.orlandoreynoso.com">Orlando Reynoso</a></p>
+			<p>Desarrollado por: <a href="http://www.orlandoreynoso.com">@orlandoreynoso</a></p>
+			<p>Derechos reservados <span class="date"><?php echo date('Y'); ?></span></p>
 		</div>
 	</div>
 <?php

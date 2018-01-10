@@ -567,9 +567,18 @@ footer.site-footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .info-mas .texto p {
+  .info-mas p {
     padding: 0px;
     margin: 0px; }
+    .info-mas p a {
+      color: #0c8f87;
+      outline: none; }
+      .info-mas p a:hover {
+        color: #ffffff !important;
+        transition: 0.5s ease; }
+  .info-mas .info-credito p span {
+    color: #ffde00;
+    text-transform: italic; }
 
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
@@ -853,6 +862,31 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 0px;
         position: absolute;
         bottom: 10px; }
+
+.who-we-are {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: var(--sizem);
+  box-sizing: border-box;
+  min-height: 300px; }
+  @media screen and (max-width: 600px) {
+    .who-we-are {
+      width: var(--sizem); } }
+  .who-we-are .cover-who {
+    width: 50%; }
+    .who-we-are .cover-who img {
+      width: var(--sizem);
+      height: auto; }
+    @media screen and (max-width: 600px) {
+      .who-we-are .cover-who {
+        width: var(--sizem); } }
+  .who-we-are .content-who {
+    width: 50%; }
+    @media screen and (max-width: 600px) {
+      .who-we-are .content-who {
+        width: var(--sizem); } }
 
 footer {
   width: 100%;
