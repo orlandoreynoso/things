@@ -32,11 +32,15 @@ function storefront_display_custom_logo() {
 }
 
 /*============= sidebar================*/
-function sidebar_cre(){
-	echo "Aqui estoy en mi sidebar para facebokk";
+function sidebar_cre(){?>
+
+<div class="list-cat-cre">
+<?php dynamic_sidebar('catprod'); ?>	
+</div>
+<?php
 }
 
-add_action('storefront_sidebar', 'sidebar_cre',8);
+add_action('storefront_get_sidebar', 'sidebar_cre',11);
 
 /*========= footer ========================*/
 function footer_mas(){?>

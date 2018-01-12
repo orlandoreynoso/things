@@ -181,27 +181,23 @@
 
 .content-area .site-main .product .woocommerce-tabs ul.tabs li.active a {
   color: #0c8f87 !important;
-  position: relative; }
-  .content-area .site-main .product .woocommerce-tabs ul.tabs li.active a:after {
-    bottom: 0;
-    content: "";
-    height: 2px;
-    background-color: #0c8f87;
-    left: 0;
-    width: 100%;
-    position: absolute; }
+  position: relative;
+  border-left: 3px solid #0c8f87; }
 
-.content-area .site-main .product .woocommerce-tabs ul li a {
-  outline: none;
-  color: #0c8f87;
-  transition: 0.5s ease;
-  padding-left: 10px; }
-  .content-area .site-main .product .woocommerce-tabs ul li a:hover {
-    color: #234765;
+.content-area .site-main .product .woocommerce-tabs ul li {
+  box-sizing: border-box; }
+  .content-area .site-main .product .woocommerce-tabs ul li a {
+    outline: none;
+    color: #0c8f87;
     transition: 0.5s ease;
-    text-decoration: none; }
-  .content-area .site-main .product .woocommerce-tabs ul li a:after {
-    color: #0c8f87; }
+    padding-left: 10px;
+    border-left: 3px solid transparent; }
+    .content-area .site-main .product .woocommerce-tabs ul li a:hover {
+      color: #234765;
+      transition: 0.5s ease;
+      text-decoration: none; }
+    .content-area .site-main .product .woocommerce-tabs ul li a:after {
+      color: #0c8f87; }
 
 /*======== Comprar por categoria =======*/
 .woocommerce .woocommerce-message {
@@ -580,6 +576,16 @@ footer.site-footer {
     color: #ffde00;
     text-transform: italic; }
 
+/*======================= sidebar a la Izquierda  ========================*/
+#primary {
+  float: right;
+  box-sizing: border-box; }
+
+#secondary {
+  float: left;
+  box-sizing: border-box;
+  padding-right: 20px; }
+
 /*======== buscador cabecera ===========*/
 header .ca-cabecera .ca-search-followers .or-buscador {
   box-sizing: border-box;
@@ -900,6 +906,10 @@ input[type=number]::-webkit-outer-spin-button {
     @media screen and (max-width: 600px) {
       .who-we-are .content-who {
         width: var(--sizem); } }
+
+#three {
+  background-color: red;
+  float: left; }
 
 footer {
   width: 100%;
