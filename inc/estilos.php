@@ -22,6 +22,7 @@ wp_register_style('estilo', get_stylesheet_directory_uri().'/css/estilo.css', ar
 	wp_register_style('fonts_google', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i|Oswald:400,700', array(), '1.0.0');
 	wp_register_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css', array(), '4.0.0');
 	wp_register_style('bxslider', get_stylesheet_directory_uri().'/css/jquery.bxslider.min.css', array(), '4.4.2');	
+	wp_register_style('bxslider', get_stylesheet_directory_uri().'/css/fuente.css', array(), '4.4.2');	
 	wp_register_style('style', get_stylesheet_directory_uri().'/style.css', array(), '1.0');
 	wp_register_style('estilo', get_stylesheet_directory_uri().'/css/estilo.css', array(), '7.0');
 	wp_register_style('animate', get_stylesheet_directory_uri().'/css/animate.css', array(), '7.0');

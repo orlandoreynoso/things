@@ -34,7 +34,9 @@ get_header(); ?>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam obcaecati minima expedita saepe ut, inventore, iste exercitationem repellendus quisquam non, perferendis nesciunt id molestiae cumque porro rerum animi doloremque beatae.</p>
 		</div>
 	</div>
-		
+
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php
@@ -56,5 +58,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
+//do_action( 'storefront_sidebar' );
 get_footer();
+
+
+?>

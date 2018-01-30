@@ -15,6 +15,18 @@
 			color: $azul
 			text-align: center
 			margin-bottom: 20px
+			position: relative
+			--width: 100%	
+			&:after
+				content: ''
+				display: block
+				height: 3px
+				width: calc(var(--width)/2)
+				position: absolute
+				left: calc( calc( 100% - ( calc(var(--width)/2)) ) / 2)
+				bottom: -0.8em
+				background-color: #b20013
+				z-index: 100
 		p
 			font-size: 1.1em
 	.cover-who
