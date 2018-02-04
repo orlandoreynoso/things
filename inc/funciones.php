@@ -1,5 +1,18 @@
 <?php 
 
+function contenidosPorNombre($ptipo, $nombre, $npaginas){
+
+  $args = array(
+      'post_type' => $ptipo,
+      'pagename' => $nombre,
+      'posts_per_page' => $npaginas
+  );
+
+return $args;
+
+}
+
+
 /*=== Menu generales ======*/
 function menus_generales(){
   register_nav_menus(array(
@@ -31,7 +44,15 @@ function storefront_display_custom_logo() {
 <?php
 }
 
+function red(){
+	dynamic_sidebar('facebook'); 
+	?>
+	<p>aqui contenido de redes sociales.</p>
+	<?php
+}
+
 /*============= sidebar================*/
+
 function sidebar_cre(){?>
 
 <div class="list-cat-cre">

@@ -1,4 +1,8 @@
 <?php
+/*
+Template Name: Quienes somos
+Template Post Type: post, page, product, peregrinaciones, boletines, pastorales, somos
+*/
 /**
  * The template for displaying all pages.
  *
@@ -21,18 +25,66 @@ get_header(); ?>
 
 
 	<div class="who-we-are">
-		<div class="intro">
-			<h2><?php the_title(); ?></h2>
-			<p>Somos una empresa que provee servicios financieros para inversión en negocios y necesidades personales y familiares, con garantía prendaria, proveído por un personal capacitado y comprometido con un servicio de excelencia y buscando siempre dar mayores beneficios a un costo accesible. </p>
-			<h2>PRINCIPALES SERVICIOS QUE BRINDA CREDIEMPEÑOS</h2>			
+<?php 
+
+          $args = array(
+          'post_type'=> 'somos',
+          'post_per_page' => -1
+
+          );
+
+?>
+
+          <?php $the_query = new WP_Query($args); ?>
+        <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+
+
+<?php 
+
+//$sluge = get_post_field( 'post_name', get_post() );
+
+//echo get_page_children(get_the_ID(),'somos');
+//echo get_post_type();
+//echo get_the_title();
+?>
+
+
+	<div class="intro">
+		<h2><?php the_title(); ?></h2>
+		<?php the_content(); ?>
+		<h2>
+		<?php echo get_post_meta( get_the_ID(), 'info_somos_servicios_titulo', true ); ?>
+		</h2>
+
+	<div class="who-services">
+		<div class="contenido-servicios">
+			<?php echo get_post_meta( get_the_ID(), 'servicios_contenido', true ); ?>		
 		</div>
-		<div class="cover-who">
-			<?php the_post_thumbnail(); ?>			
+		<div class="services">
+			<div class="services-one">
+				<div class="img-services">
+				<?php echo get_post_meta( get_the_ID(), 'img_servicio_empenar', true ); ?>
+				</div>				
+				<!-- div class="ingresar">
+					<span>Ingresa para mas detalles</span>
+				</div -->				
+			</div>
+			<div class="services-two">
+				<div class="img-services">
+				<?php echo get_post_meta( get_the_ID(), 'img_servicio_comprar', true ); ?>
+				</div>				
+				<!-- div class="ingresar">
+					<span>Ingresa para mas detalles</span>
+				</div -->
+			</div>
 		</div>
-		<div class="content-who">
-			<h2>ESTRATEGIAS Y ACCIONES DE MERCADEO</h2>			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam obcaecati minima expedita saepe ut, inventore, iste exercitationem repellendus quisquam non, perferendis nesciunt id molestiae cumque porro rerum animi doloremque beatae.</p>
-		</div>
+	</div>
+
+
+<?php endwhile; wp_reset_postdata();?>
+
+	</div>
+
 	</div>
 
 

@@ -1,0 +1,52 @@
+.comprar-area
+	#primary
+		float: left
+	#secondary
+		float: right
+		.widget
+			list-style: none
+.content-buy
+	.titulo
+		color: $gris3
+		text-align: center
+		margin-bottom: 50px
+		position: relative
+		text-transform: uppercase
+		font-size: 1.5em
+		--width: 20%	
+		&:after
+			content: ''
+			display: block
+			height: 3px
+			width: calc(var(--width)/2)
+			position: absolute
+			left: calc( calc( 100% - ( calc(var(--width)/2)) ) / 2)
+			bottom: -0.5em
+			background-color: $azul
+			z-index: 100
+	.intro
+		width: 100%
+		box-sizing: border-box
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		.foto
+			width: 100%
+			img
+				width: auto
+				display: block
+				border-radius: 0px
+				height: 150px
+		.contenido
+			width: 100%
+			font-size: 1.3em
+			ul
+				li
+					padding: 5px
+					list-style: none
+					color: $azul
+					&:before 
+						content: "•"
+						padding-right: 8px
+						color: $verde
+				
