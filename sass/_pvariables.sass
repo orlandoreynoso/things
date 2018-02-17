@@ -1,12 +1,10 @@
-/* @media screen and ( min-width: 641px ) ocultar de 641px hasta infinito  para que se muestre el menu */
-/* @media screen and ( max-width: 640px ) 0 a 640px para movil ò de 640 a 0 */
-
 $verde: #0c8f87
 $amarillo: #ffde00
 $oro: #ffde00
 $yema: #ffde00
 $blanco: #ffffff
 $fontopen: 'Open Sans', sans-serif
+$fpake: 'pakenhamregular'
 $grisoscuro: #212121
 $gris: #cccccc
 $gris3: #333
@@ -18,16 +16,6 @@ $celeste: #0da5e4
 $crema: #fee9ce
 $negro: #000000
 
-\:root
-  --sizem: 100%
-
-@font-face
-	font-family: 'pakenhamregular'
-	src: url('fonts/pakenham_rg-webfont.woff2') format('woff2'), url('fonts/pakenham_rg-webfont.woff') format('woff')
-	font-weight: normal
-	font-style: normal
-
-/*==========================*/
 @mixin sidebar()
 	.entradas
 		box-sizing: border-box
@@ -96,10 +84,9 @@ $negro: #000000
 							-webkit-transition: 0.5s ease
 						&:first-letter
 							text-transform: uppercase
-/*============================*/
-
-@mixin opacidad($valor: 80)
-	filter: alpha(opacity=$valor)
+/*===========*/							
+@mixin opacidad( $valor: 80)
+	filter: alpha( opacity = $valor )
 	-moz-opacity: 1.0
 	opacity: 0.5
 @mixin transicion_a()
@@ -142,3 +129,12 @@ $negro: #000000
 		padding: 4px 5px 4px 10px
 		text-align: center
 		color: $gris
+/*= variable css ====*/		
+\:root
+	--sizem: 100%
+/*== fuente pake ====*/	
+@font-face
+	font-family: 'pakenhamregular'
+	src: url('fonts/pakenham_rg-webfont.woff2') format('woff2'), url('fonts/pakenham_rg-webfont.woff') format('woff')
+	font-weight: normal
+	font-style: normal

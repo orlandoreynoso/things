@@ -174,21 +174,16 @@
             a
               color: $verde !important
               position: relative
-              &:after
-                bottom: 0
-                content: ""
-                height: 2px
-                background-color: $verde
-                left: 0
-                width: 100%
-                position: absolute
+              border-left: 3px solid $verde
         ul
           li
+            box-sizing: border-box
             a
               outline: none
               color: $verde
               transition: 0.5s ease
-              padding-left: 10px            
+              padding-left: 10px     
+              border-left: 3px solid transparent
               &:hover
                 color: $azul
                 transition: 0.5s ease
@@ -578,3 +573,33 @@ footer.site-footer
       color: $celeste !important
       transition: 0.5s ease
       text-decoration: none
+/*==============================*/      
+.info-mas
+  padding: 20px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  p
+    padding: 0px
+    margin: 0px
+    a
+      color: $verde
+      outline: none
+      &:hover
+        color: $blanco !important
+        transition: 0.5s ease
+  .info-credito
+    p
+      span
+        color: $yema
+        text-transform: italic
+  .texto
+/*======================= sidebar a la Izquierda  ========================*/
+#primary
+  float: right
+  box-sizing: border-box
+#secondary
+  float: left
+  box-sizing: border-box
+  padding-right: 30px

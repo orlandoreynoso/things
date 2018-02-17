@@ -1,5 +1,18 @@
 <?php 
 
+function contenidosPorNombre($ptipo, $nombre, $npaginas){
+
+  $args = array(
+      'post_type' => $ptipo,
+      'pagename' => $nombre,
+      'posts_per_page' => $npaginas
+  );
+
+return $args;
+
+}
+
+
 /*=== Menu generales ======*/
 function menus_generales(){
   register_nav_menus(array(
@@ -31,6 +44,49 @@ function storefront_display_custom_logo() {
 <?php
 }
 
+function red(){
+	dynamic_sidebar('facebook'); 
+	?>
+	<p>aqui contenido de redes sociales.</p>
+	<?php
+}
+
+/*============= sidebar================*/
+
+function sidebar_cre(){?>
+
+<div class="list-cat-cre">
+<?php dynamic_sidebar('catprod'); ?>	
+</div>
+<?php
+}
+
+add_action('storefront_get_sidebar', 'sidebar_cre',11);
+
+/*========= footer ========================*/
+function footer_mas(){?>
+<?php 
+
+	remove_action('storefront_footer','storefront_footer_widgets',10);
+	remove_action('storefront_footer','storefront_credit',20);	
+	
+	
+
+?>
+	<div class="info-mas">
+		<div class="texto">
+			<p>Teléfonos: (502) 7755 - 1863 | (502) 5986 - 0818</p>
+			<p>Dirección: 4a. Avenida 8-39 zona 1</p>
+			<p>Santa Cruz del Quiche, El Quiché</p>
+		</div>
+		<div class="info-credito">
+			<p>Desarrollado por: <a href="http://www.orlandoreynoso.com">@orlandoreynoso</a></p>
+			<p>Derechos reservados <span class="date"><?php echo date('Y'); ?></span></p>
+		</div>
+	</div>
+<?php
+}
+add_action('storefront_footer', 'footer_mas',8);
 
 function or_slider(){ get_template_part( 'template/cover','slide'); }
 add_action( 'homepage', 'or_slider',9);

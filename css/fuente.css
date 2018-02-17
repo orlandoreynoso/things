@@ -1,0 +1,7 @@
+/*=== fuente ============*/
+@font-face{
+	font-family: 'pakenhamregular';
+	src: url('fonts/pakenham_rg-webfont.woff2') format('woff2'), url('fonts/pakenham_rg-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
