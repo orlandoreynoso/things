@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Quienes somos
+Template Name: Comprar
 Template Post Type: post, page, product, peregrinaciones, boletines, pastorales, somos
 */
 /**
@@ -14,7 +14,10 @@ Template Post Type: post, page, product, peregrinaciones, boletines, pastorales,
  * @package storefront
  */
 
-get_header(); ?>
+	get_header();
+?>
+
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 	</div>
@@ -27,6 +30,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 	<div class="content-buy">
+		<?php echo "Estamos en pagina de comprar"; ?>
 		<h2 class="titulo"><?php the_title(); ?></h2>
 		<div class="intro">
 			<div class="foto">

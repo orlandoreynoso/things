@@ -19,6 +19,7 @@ function show_category_posts( $atts ){
         return $content;
 }
 add_shortcode('mostrar_cat', 'show_category_posts');
+
 function ultimas_entradas(){
 $args=array(
 'post_type' => 'post',

@@ -25,7 +25,7 @@ get_header(); ?>
 
 
 	<div class="who-we-are">
-<?php 
+<?php
 
           $args = array(
           'post_type'=> 'somos',
@@ -39,7 +39,7 @@ get_header(); ?>
         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
 
-<?php 
+<?php
 
 //$sluge = get_post_field( 'post_name', get_post() );
 
@@ -58,21 +58,27 @@ get_header(); ?>
 
 	<div class="who-services">
 		<div class="contenido-servicios">
-			<?php echo get_post_meta( get_the_ID(), 'servicios_contenido', true ); ?>		
+			<?php echo get_post_meta( get_the_ID(), 'servicios_contenido', true ); ?>
 		</div>
 		<div class="services">
 			<div class="services-one">
+				<h3>
+				<?php echo get_post_meta( get_the_ID(), 'info_somos_titulo_give', true ); ?>
+				</h3>
 				<div class="img-services">
 				<?php echo get_post_meta( get_the_ID(), 'img_servicio_empenar', true ); ?>
-				</div>				
+				</div>
 				<!-- div class="ingresar">
 					<span>Ingresa para mas detalles</span>
-				</div -->				
+				</div -->
 			</div>
 			<div class="services-two">
+				<h3>
+				<?php echo get_post_meta( get_the_ID(), 'info_somos_titulo_buy', true ); ?>
+				</h3>
 				<div class="img-services">
 				<?php echo get_post_meta( get_the_ID(), 'img_servicio_comprar', true ); ?>
-				</div>				
+				</div>
 				<!-- div class="ingresar">
 					<span>Ingresa para mas detalles</span>
 				</div -->
