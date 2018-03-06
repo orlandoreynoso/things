@@ -15,6 +15,9 @@ Template Post Type: post, page, product, peregrinaciones, boletines, pastorales,
  */
 
 get_header(); ?>
+
+<?php global $post; ?>
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 	</div>
@@ -95,7 +98,7 @@ get_header(); ?>
 
 
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area credi_<?php echo $post->post_name;  ?>">
 		<main id="main" class="site-main" role="main">
 			<?php
 
