@@ -22,7 +22,7 @@ $pagename = get_query_var('pagename');
 
 	<div id="primary" class="content-area woo-<?php echo  $pagename;?>">
 		<main id="main" class="site-main" role="main">
-			<?php  echo "this is page that i brought from store front "; ?>
+			<?php //  echo "this is page that i brought from store front "; ?>
 			<?php while ( have_posts() ) : the_post();
 
 				do_action( 'storefront_page_before' );

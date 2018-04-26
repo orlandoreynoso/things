@@ -1056,7 +1056,7 @@ input[type=number]::-webkit-outer-spin-button {
         color: #0c8f87; }
 
 #primary.woo-empenar {
-  width: 70%;
+  width: 66%;
   box-sizing: border-box;
   float: left; }
   @media screen and (max-width: 740px) {
@@ -1068,6 +1068,7 @@ input[type=number]::-webkit-outer-spin-button {
   box-sizing: border-box;
   float: right;
   margin: 0px auto;
+  text-align: center;
   text-align: center; }
   @media screen and (max-width: 740px) {
     .side-credie {
@@ -1076,7 +1077,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: #234765; }
 
 #primary.woo-contacto {
-  width: 60%;
+  width: 56%;
   box-sizing: border-box;
   float: left;
   padding-right: 20px; }
@@ -1095,7 +1096,8 @@ input[type=number]::-webkit-outer-spin-button {
 .side-contacto {
   width: 39%;
   box-sizing: border-box;
-  float: right; }
+  float: right;
+  text-align: ce; }
   @media screen and (max-width: 740px) {
     .side-contacto {
       width: 100%; } }
